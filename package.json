@@ -4,8 +4,8 @@
     "description": "Chevere VuePress Deploy Template",
     "main": "index.js",
     "scripts": {
-        "dev": "node --max_old_space_size=8192 ./node_modules/vuepress/cli.js dev docs",
-        "build": "node --max_old_space_size=8192 ./node_modules/vuepress/cli.js build docs"
+        "dev": "NODE_OPTIONS=--openssl-legacy-provider node --max_old_space_size=8192 ./node_modules/vuepress/cli.js dev docs",
+        "build": "NODE_OPTIONS=--openssl-legacy-provider node --max_old_space_size=8192 ./node_modules/vuepress/cli.js build docs"
     },
     "license": "MIT",
     "devDependencies": {
