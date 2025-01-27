@@ -12,10 +12,6 @@ if (!project.plugins) {
     project.plugins = [];
 }
 project.plugins.push(
-    ['@vuepress/pwa', {
-        serviceWorker: true,
-        updatePopup: true
-    }],
     ['@vuepress/medium-zoom', true]
 );
 if (!project.themeConfig.nav) {
