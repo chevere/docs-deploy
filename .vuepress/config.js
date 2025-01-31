@@ -7,16 +7,19 @@ project.head.push(
         content: 'width=device-width, initial-scale=1.0'
     }]
 );
-
+if (!project.themeConfig) {
+    project.themeConfig = {};
+}
+if (!project.themeConfig.nav) {
+    project.themeConfig.nav = [];
+}
 if (!project.plugins) {
     project.plugins = [];
 }
 project.plugins.push(
-    ['@vuepress/medium-zoom', true]
+    ['@vuepress/medium-zoom', true],
+    ['seo', project.themeConfig.seo || {}]
 );
-if (!project.themeConfig.nav) {
-    project.themeConfig.nav = [];
-}
 if (project.themeConfig.nav_before) {
     project.themeConfig.nav.unshift(
         ...project.themeConfig.nav_before
