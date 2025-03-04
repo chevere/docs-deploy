@@ -16,6 +16,7 @@
     },
     "author": "Rodolfo Berrios",
     "dependencies": {
+        "file-loader": "^6.2.0",
         "vuepress-plugin-seo": "0.1.4",
         "vuepress-theme-default-prefers-color-scheme": "https://github.com/rodber/vuepress-theme-default-prefers-color-scheme#2.0.1"
     }

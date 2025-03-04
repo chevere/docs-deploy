@@ -36,5 +36,15 @@ if (project.themeConfig.nav_after) {
 if (!project.themeConfig.sidebar) {
     project.themeConfig.sidebar = [];
 }
+project.chainWebpack = (config) => {
+    config.module
+      .rule('webp')
+      .test(/\.webp$/)
+      .use('file-loader')
+      .loader('file-loader')
+      .options({
+        name: 'assets/img/[name].[hash:8].[ext]'
+      });
+  }
 project.themeConfig.sidebar = require('./sidebar/en');
 module.exports = project
