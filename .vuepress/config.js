@@ -45,6 +45,6 @@ project.chainWebpack = (config) => {
       .options({
         name: 'assets/img/[name].[hash:8].[ext]'
       });
-  }
+}
 project.themeConfig.sidebar = require('./sidebar/en');
 module.exports = project
